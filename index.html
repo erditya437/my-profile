@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Adit</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">[ E ]</div>
+            <ul class="nav-links">
+                <li><a href="#home" onclick="closeMenu()">Home</a></li>
+                <li><a href="#about" onclick="closeMenu()">About</a></li>
+                <li><a href="#blog" onclick="closeMenu()">Blog</a></li>
+                <li><a href="#contact" onclick="closeMenu()">Kontak</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+    
+    <!-- Spacer agar konten tidak tertutup navbar -->
+    <div class="navbar-space"></div>
+    
+
+    <section id="home" class="hero  fade-in">
+        <div class="hero-content">
+            <img src="aset/aset3.jpg" alt="Foto Profil Adit" class="profile-img">
+            <h1 class="nama">Erditya Megantoro Parikesit</h1>
+            <p class="tentang">Seorang pengembang web yang fokus di backend dan UI/UX, berambisi untuk mengembangkan proyek besar dengan pengalaman pengguna yang optimal.</p>
+            <a href="projek.html" class="btn" onclick="showLoader(event)">View My Projects</a>
+        </div>
+    </section>
+    
+
+    <section id="about" class="about fade-in">
+        <div class="container">
+            <h2>Tentang Saya</h2>
+            <p>Saya Adit, seorang pengembang web yang fokus pada backend, terutama PHP dan SQL. Saat ini, saya juga mulai mendalami UI/UX untuk membuat tampilan dan pengalaman pengguna yang lebih baik.</p> <br>
+            <p>Pendidikan
+                SD, SMP, SMA: Belajar seperti biasa, belum mengenal pemrograman.
+                
+                Kuliah: Baru mengenal pemrograman dan mulai serius mempelajarinya.</p>
+        </div>
+    </section>
+    
+    <section id="blog" class="blog fade-in">
+        <div class="container">
+            <h2></h2>
+            <p>Ketika kita berbicara tentang perjalanan, tidak hanya perjalanan fisik ke tempat-tempat baru, tetapi juga perjalanan batin, perjalanan menuju pemahaman diri,
+                 dan perjalanan menuju impian yang selama ini kita kejar. Hidup ini ibarat sebuah buku yang terus ditulis, di mana setiap hari adalah halaman baru yang penuh dengan kemungkinan. </p>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact fade-in">
+        <div class="container">
+            <h2 class="kontak">Kontak Saya</h2>
+            <form>
+                <input type="text" placeholder="Nama" required>
+                <input type="email" placeholder="Email" required>
+                <textarea placeholder="Pesan" required></textarea>
+                <button type="submit">Kirim</button>
+            </form>
+           
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Informasi Portofolio -->
+            <div class="footer-about">
+                <h2></h2>
+                <p>Eksplorasi proyek saya, termasuk Olympian Tales dan lainnya.</p>
+            </div>
+    
+            <!-- Link ke Proyek -->
+            <div class="footer-projects">
+                <h3>Kunjungi</h3>
+                <ul>
+                    <li><a href="https://erditya437.github.io/Olympian-Tales/" target="_blank">Olympian Tales</a></li>
+                    <li><a href="https://erditya437.github.io/Osirian-Tales/" target="_blank">Osirian Tales</a></li>
+                </ul>
+            </div>
+    
+            <!-- Sosial Media -->
+            <div class="footer-social">
+                <h3>Ikuti Saya</h3>
+                <a href="https://instagram.com/erditya007/" target="_blank">
+                    <img src="aset/ikon3.png" alt="Instagram">
+                </a>
+                <a href="https://facebook.com/profile.php?id=61573510748659" target="_blank">
+                    <img src="aset/ikon1.png" alt="Facebook">
+                </a>
+                <a href="https://wa.me/628XXXXXXXXX" target="_blank">
+                    <img src="aset/ikon.png" alt="WhatsApp">
+                </a>
+            </div>
+        </div>
+    
+        <!-- Hak Cipta -->
+        <div class="footer-bottom">
+            <p>© <span id="year"></span> Adit | All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Set tahun otomatis
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    
+    
+    <div class="loader-container" id="loader">
+        <div class="loading-bar">
+            <div class="progress"></div>
+            <div class="glow"></div>
+        </div>
+    </div>
+    
+</body>
+</html>
